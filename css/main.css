@@ -1,23 +1,32 @@
 .footer h3 {
   font-style: italic;
-  border: 3px solid red; }
+  border: 3px solid red;
+}
 
 .nav {
-  background-color: #ffc966; }
-  .nav ul li {
-    list-style: none; }
-  .nav a {
-    text-decoration: none;
-    font-size: 20px;
-    color: #4d4d4d; }
-    .nav a:hover {
-      color: royalblue; }
+  background-color: #ffc966;
+}
+.nav ul li {
+  list-style: none;
+}
+.nav a {
+  text-decoration: none;
+  font-size: 20px;
+  color: #4d4d4d;
+}
+.nav a:hover {
+  color: royalblue;
+}
 
-.heading, h1, .footer h3 {
+h1,
+.footer h3 {
   color: orange;
   font-size: 40px;
   background-color: rgba(128, 128, 128, 0.4);
-  text-align: center; }
+  text-align: center;
+}
 
-h1:hover, .footer h3:hover {
-  background-color: #003a8c; }
+h1:hover,
+.footer h3:hover {
+  background-color: #003a8c;
+}
