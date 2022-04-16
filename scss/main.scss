@@ -7,7 +7,7 @@ $font-md: 30px;
 $font-sm: 20px;
 
 .nav {
-  background-color: $color-primary;
+  background-color: lighten($color-primary, 20%);
 
   ul li {
     list-style: none;
@@ -16,7 +16,7 @@ $font-sm: 20px;
   a {
     text-decoration: none;
     font-size: $font-sm;
-    color: $color-secondary;
+    color: darken($color-secondary, 20%);
 
     &:hover {
       color: $color-tertiary;
@@ -24,26 +24,33 @@ $font-sm: 20px;
   }
 }
 
-@mixin headingStyles($fontSize) {
-  font-size: $fontSize;
-  color: $color-secondary;
+.heading {
+  color: $color-primary;
+  font-size: $font-lg;
+  background-color: transparentize($color-secondary, 0.6);
   text-align: center;
 }
 
-@mixin transition($param...) {
-  transition: $param;
+@function fontSize($size: 25px) {
+  @return $size * 2;
 }
 
-.banner h1 {
-  @include headingStyles($font-lg);
+h1 {
+  @extend .heading;
+
+  &:hover {
+    background-color: green;
+  }
 }
 
 .footer h3 {
-  @include headingStyles($font-md);
-  @include transition(color 0.5s, background-color 1s);
+  @extend h1;
+}
 
-  &:hover {
-    color: $color-tertiary;
-    background-color: $color-primary;
-  }
+.banner p {
+  font-size: fontSize($font-sm);
+}
+
+.footer p {
+  font-size: fontSize();
 }
